@@ -8,7 +8,8 @@ The original source code archive (on Google Code) can be found here:
 https://code.google.com/archive/p/more-reasoner/
 
 The original project description and acknowledgments are:
-```
+
+<pre>
 *MORe: Modular Combination of OWL Reasoners for Ontology Classification*
 
 **MORe Reasoner**
@@ -46,4 +47,4 @@ You are welcome to contact them via e-mail (see above links to homepages for add
 **Acknowledgements**
 
 MORe is being developed in the Knowledge Representation and Reasoning group at the Department of Computer Science of the University of Oxford. This work was supported by the Royal Society, the Seventh Framework Program (FP7) of the European Commission under Grant Agreement 318338, "Optique", and the EPSRC projects ExODA, Score! and MaSI^3.
-```
+</pre>
