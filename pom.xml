@@ -1,0 +1,178 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>MORe</artifactId>
+  <packaging>bundle</packaging>
+  <version>0.1.7-SNAPSHOT</version>
+  <name>MORe</name>
+  <description>MORe OWL Reasoner</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-ClassPath>.,lib/org.semanticweb.hermit-1.3.8.413.jar,
+            lib/elk-owlapi.jar,
+            lib/uk.ac.manchester.cs.owl.factplusplus-P5.x-v1.6.5.jar
+            </Bundle-ClassPath>
+            <Bundle-SymbolicName>${pom.groupId}.${pom.artifactId};
+            singleton:=true</Bundle-SymbolicName>
+            <Export-Package>org.semanticweb.more</Export-Package>
+            <Private-Package>org.semanticweb.more.*</Private-Package>
+            <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+            <Embed-Directory>OSGI-INF/lib</Embed-Directory>
+            <Embed-Transitive>true</Embed-Transitive>
+            <Import-Package>
+            com.google.common.base;version="[18.0,19)",
+            org.osgi.framework;version="[1.6,2)";resolution:=optional,
+            org.osgi.util.tracker;version="[1.5,2)";resolution:=optional,
+            org.semanticweb.owlapi.apibinding;version="[4.1,5)",
+            org.semanticweb.owlapi.formats;version="[4.1,5)",
+            org.semanticweb.owlapi.model;version="[4.1,5)",
+            org.semanticweb.owlapi.model.parameters;version="[4.1,5)",
+            org.semanticweb.owlapi.reasoner;version="[4.1,5)",
+            org.semanticweb.owlapi.reasoner.impl;version="[4.1,5)",
+            org.semanticweb.owlapi.util;version="[4.1,5)",
+            org.semanticweb.owlapi.vocab;version="[4.1,5)",
+            org.w3c.dom,org.xml.sax,org.xml.sax.ext,org.xml.sax.helpers,
+            javax.swing,javax.swing.border,
+            org.apache.log4j;version="[1.2,2)",
+            org.apache.log4j.spi;version="[1.2,2)",
+            org.protege.editor.core.editorkit.plugin;version="[5.0,6)",
+            org.protege.editor.core.plugin;version="[5.0,6)",
+            org.protege.editor.owl.model;version="[5.0,6)",
+            org.protege.editor.owl.model.inference;version="[5.0,6)",
+            org.protege.editor.owl.ui.preferences;version="[5.0,6)",
+            org.slf4j;version="[1.7,2)"</Import-Package>
+<Bundle-NativeCode>
+ lib/native/64bit/FaCTPlusPlusJNI.dll;
+ osname=win ;
+ osname=WindowsNT ;
+ osname=Windows NT ;
+ osname=WinNT ;
+ osname=WindowsXP ;
+ osname=Windows XP ;
+ osname=WinXP ;
+ osname=WindowsVista ;
+ osname=Windows Vista ;
+ osname=Windows2003 ;
+ osname=Windows2008 ;
+ osname=Windows7 ;
+ osname=Windows 7 ;
+ osname=Windows8 ;
+ osname=Windows 8 ;
+ osname=Windows8.1 ;
+ osname=Windows 8.1 ;
+ processor=x86_64 ;
+ processor = amd64 ,
+ lib/native/32bit/FaCTPlusPlusJNI.dll;
+ osname=win ;
+ osname=Windows95 ;
+ osname=Windows 95 ;
+ osname=Win95 ;
+ osname=Windows98 ;
+ osname=Windows 98 ;
+ osname=Win98 ;
+ osname=WindowsNT ;
+ osname=Windows NT ;
+ osname=WinNT ;
+ osname=WindowsCE ;
+ osname=Winndows CE ;
+ osname=WinCE ;
+ osname=WindowsXP ;
+ osname=Windows XP ;
+ osname=WinXP ;
+ osname=WindowsVista ;
+ osname=Windows Vista ;
+ osname=Windows2003 ;
+ osname=Windows2008 ;
+ osname=Windows7 ;
+ osname=Windows 7 ;
+ osname=Windows8 ;
+ osname=Windows 8 ;
+ osname=Windows8.1 ;
+ osname=Windows 8.1 ;
+ processor = i386 ;
+ processor = x86 ,
+ lib/native/64bit/libFaCTPlusPlusJNI.so;
+ osname=Linux ;
+ processor=x86_64 ;
+ processor=amd64 ,
+ lib/native/32bit/libFaCTPlusPlusJNI.so;
+ osname=Linux ;
+ processor=i386 ,
+ lib/native/64bit/libFaCTPlusPlusJNI.jnilib;
+ osname=MacOSX ;
+ osname=Mac OS X ;
+ processor=ppc64 ;
+ processor=x86_64 ,
+ lib/native/32bit/libFaCTPlusPlusJNI.jnilib;
+ osname=MacOSX ;
+ osname=Mac OS X ;
+ processor=ppc ;
+ processor=i386
+ </Bundle-NativeCode>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source/>
+          <target/>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <groupId>org.semanticweb</groupId>
+  	<dependencies>
+		<dependency>
+    			<groupId>net.sourceforge.owlapi</groupId>
+    			<artifactId>owlapi-osgidistribution</artifactId>
+    			<version>4.2.6</version>
+		</dependency>
+<dependency>
+    <groupId>net.sourceforge.owlapi</groupId>
+    <artifactId>org.semanticweb.hermit</artifactId>
+    <version>1.3.8.413</version>
+</dependency>
+<dependency>
+    <groupId>org.semanticweb.elk</groupId>
+    <artifactId>elk-owlapi</artifactId>
+    <version>0.4.3</version>
+</dependency>
+<dependency>
+    <groupId>edu.stanford.protege</groupId>
+    <artifactId>protege-editor-owl</artifactId>
+    <version>5.1.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/edu.stanford.protege/protege-editor-core -->
+<dependency>
+    <groupId>edu.stanford.protege</groupId>
+    <artifactId>protege-editor-core</artifactId>
+    <version>5.1.0</version>
+</dependency>
+<dependency>
+    <groupId>net.sourceforge.owlapi</groupId>
+    <artifactId>owlapi-parsers</artifactId>
+    <version>4.0.0</version>
+</dependency>
+<dependency>
+    <groupId>javax.xml</groupId>
+    <artifactId>jaxp-api</artifactId>
+    <version>1.4.2</version>
+</dependency>
+  	</dependencies>
+</project>

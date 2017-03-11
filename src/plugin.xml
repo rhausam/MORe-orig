@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<plugin>
+    <extension id="MORe.reasoner.factory" point="org.protege.editor.owl.inference_reasonerfactory">
+        <name value="MORe A HermiT (0.1.7)"/>
+        <label value="MORe A HermiT (0.1.7)"/>
+        <class value="org.semanticweb.more.protege.MOReProtegePluginInstance"/>
+    </extension>
+    <extension id="MOReJFact.reasoner.factory" point="org.protege.editor.owl.inference_reasonerfactory">
+        <name value="MORe A FaCT++ (0.1.7)"/>
+        <label value="MORe A FaCT++ (0.1.7)"/>
+        <class value="org.semanticweb.more.protege.MOReFaCTPlusPlusProtegePluginInstance"/>
+    </extension>
+    <extension id="MOReRLrew.reasoner.factory" point="org.protege.editor.owl.inference_reasonerfactory">
+        <name value="MORe B Experimental (0.1.7)"/>
+        <label value="MORe B Experimental (0.1.7)"/>
+        <class value="org.semanticweb.more.protege.MOReRLrewProtegePluginInstance"/>
+    </extension>
+</plugin>
