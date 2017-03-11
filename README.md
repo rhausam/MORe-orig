@@ -1,7 +1,7 @@
 # MORe-orig
 Updated version of the original MORe OWL reasoner code.  This includes updates to OWL API 4.2.6 and the Protege plugin to be compatible with Protege 5.1.0.  The JFact OWL 2 reasoner has been replaced with FaCT++ 1.6.5 and the ELK reasoner has been updated to version 0.4.3.  The HermiT reasoner version is 1.3.8.413 (compatible with OWL API 4). 
 
-## Original description and source code
+### Original description and source code
 
 The original source code archive (on Google Code) can be found here:
 
