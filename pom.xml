@@ -130,8 +130,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source/>
-          <target/>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
@@ -147,6 +147,13 @@
     <groupId>net.sourceforge.owlapi</groupId>
     <artifactId>org.semanticweb.hermit</artifactId>
     <version>1.3.8.413</version>
+</dependency>
+<dependency>
+	<groupId>uk.ac.manchester.cs.factplusplus</groupId>
+	<artifactId>FaCTPlusPlusReasoner</artifactId>
+	<version>1.6.5</version>
+	<scope>system</scope>
+	<systemPath>${project.basedir}/src/lib/uk.ac.manchester.cs.owl.factplusplus-P5.x-v1.6.5.jar</systemPath>
 </dependency>
 <dependency>
     <groupId>org.semanticweb.elk</groupId>
